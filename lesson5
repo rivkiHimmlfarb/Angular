@@ -1,0 +1,47 @@
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { noop, timer } from 'rxjs';
+
+@Component({
+  selector: 'child',
+  standalone: true,
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class ChildComponent{
+  title = 'hw';
+ // timer = setInterval(startTimer);
+now = 0;
+
+startTimer() {
+setTimeout(() => {
+    this.now++;
+}, 1000);
+ }
+}
+
+// בס"ד
+// אנגולר שיעור 5  
+// מה למדנו - - 
+// 	קומפוננטת פלט
+// 	הגדרת   @Output
+// 	הגדרת ארוע EventEmitter
+// 	שליחת הארוע מקומפוננטת הבן
+// 	קבלת ארוע בקומפוננטת ההורה
+
+//  תרגיל - -
+// •	צרי קומפוננטה אב
+// •	צרי קומפוננטת בן 
+// •	הוסיפי בקומפוננטת הבן פרמטר של טיימר
+// •	הוסיפי בקומפוננטת הבן לחצן start ובלחיצה עליו הטיימר יתחיל לפעול
+// •	הוסיפי בקומפוננטת הבן לחצן stop ובלחיצה עליו הטיימר ישלח ארוע לקומפוננטת האב עם הנתון כמה זמן הטיימר פעל
+// •	הציגי בקומפוננטת האב סיכום מספר שניות שהטיימר פעל
+
+
+
+
+
+
+// בהצלחה !!
+
